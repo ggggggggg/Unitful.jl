@@ -838,7 +838,7 @@ end
   end
   @test errorstr(DimensionError(1u"m",2)) == "DimensionError: 1 m and 2 are not dimensionally compatible."
   @test errorstr(DimensionError(1u"m",NoDims)) == "DimensionError: 1 m and  are not dimensionally compatible."
-  @test errorstr(DimensionError(u"m",2)) == "DimensionError: 1 m and 2 are not dimensionally compatible."
+  @test errorstr(DimensionError(u"m",2)) == "DimensionError: m and 2 are not dimensionally compatible."
 end
 
 # Test that the @u_str macro will find units in other modules.
